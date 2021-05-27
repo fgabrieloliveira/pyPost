@@ -1,0 +1,18 @@
+{% extends "base.html"%}
+{% load static %}
+{% block content %}
+
+<br>
+<div class="container align-center">
+<div class="card" style="width: 1110px;">
+    <div class="card-body">
+        <p class="text-muted">{{ article_info.author }} in {{ article_info.pub_date }}</p>
+        <h2 class="text-center">{{ article_info.title }}</h2>
+        <h5 class="text-center">{{ article_info.headline }}</h6>
+
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}

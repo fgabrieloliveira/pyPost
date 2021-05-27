@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>PythonPost</title>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    </header>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">PythonPost</a>
+              
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+{% block content %}
+{% endblock %}
+
+
+
+
+
+
+    </body>
+</html>
