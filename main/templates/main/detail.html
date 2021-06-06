@@ -1,18 +1,22 @@
-{% extends "base.html"%}
+{% extends "base.html" %}
 {% load static %}
 {% block content %}
 
 <br>
 <div class="container align-center">
 <div class="card" style="width: 1110px;">
+    <img class="card-img-top" src="/{{MEDIA_URL}}{{article_info.image}}">
     <div class="card-body">
+        <div class="card-text">
         <p class="text-muted">{{ article_info.author }} in {{ article_info.pub_date }}</p>
         <h2 class="text-center">{{ article_info.title }}</h2>
-        <h5 class="text-center">{{ article_info.headline }}</h6>
-
+        <h5 class="text-center">{{ article_info.headline }}</h5>
+        <br>
+        <p class="text-justified">{{ article_info.text }}</p>
+        </div>
         </div>
     </div>
 </div>
-</div>
+
 
 {% endblock %}

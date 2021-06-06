@@ -4,16 +4,21 @@
 <br>
 {% for articles in articles_list %}
 <div class="container align-items-center">
-<div class="card" style="width: 500px;">
+    
+<div class="card" style="width: 600px;">
+    <img class="card-img-top" src="{{MEDIA_URL}}{{articles.image}}">
     <div class="card-body">
         <a href="article_detail/{{ articles.id }}"><h3 class="card-title">{{ articles.title }}</h3></a>
         <div class="card-text">
             <h5>{{ articles.headline }}</h5>
             <p>{{ articles.pub_date }}</p>
             
+            
         </div>
     </div>
 </div>
 </div>
 {% endfor %}
+
+
 {% endblock %}

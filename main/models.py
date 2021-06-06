@@ -18,6 +18,7 @@ class Articles(models.Model):
     text = models.TextField(max_length=1000)
     author = models.ForeignKey(Reporters, on_delete=SET_DEFAULT, default='desconhecido')
     pub_date = models.DateField(default=timezone.now)
+    image = models.ImageField(default='static/images/default.jpeg')
     
     def __str__(self):
         return self.title
