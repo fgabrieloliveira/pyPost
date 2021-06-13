@@ -3,9 +3,9 @@
 {% block content %}
 
 <br>
-<div class="container align-center">
-<div class="card" style="width: 1110px;">
-    <img class="card-img-top img-thumbnail" src="/{{MEDIA_URL}}{{article_info.image}}">
+
+<div class="card offset-2" style="width: 860px;">
+    <img class="card-img-top" src="/{{MEDIA_URL}}{{article_info.image}}">
     <div class="card-body">
         <div class="card-text">
         <p class="text-muted">{{ article_info.author }} in {{ article_info.pub_date }}</p>
@@ -17,6 +17,7 @@
         </div>
     </div>
 </div>
+
 
 
 {% endblock %}

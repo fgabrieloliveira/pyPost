@@ -3,20 +3,22 @@
 {% block content %}
 <br>
 {% for articles in articles_list %}
+
 <div class="container w-50 hx-auto">
-    
+    <a href="article_detail/{{ articles.id }}" style="text-decoration: none; color: black;">
 <div class="card" style="width: 600px;">
     <img class="card-img-top" src="{{MEDIA_URL}}{{articles.image}}">
     <div class="card-body">
-        <a href="article_detail/{{ articles.id }}"><h3 class="card-title">{{ articles.title }}</h3></a>
+        <h3 class="card-title">{{ articles.title }}</h3>
         <div class="card-text">
             <h5>{{ articles.headline }}</h5>
-            <p>{{ articles.pub_date }}</p>
+            <p class="text-muted">{{ articles.pub_date }}</p>
             
             
         </div>
     </div>
 </div>
+    </a>
 </div>
 <br>
 {% endfor %}
