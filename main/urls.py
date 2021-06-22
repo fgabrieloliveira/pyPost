@@ -5,5 +5,6 @@ from django.conf import settings
 
 urlpatterns = [
 path('', views.Index, name='index'),
-path('article_detail/<int:article_id>', views.Article_datail, name='datail')
+path('article_detail/<int:article_id>', views.Article_datail, name='datail'),
+path('teste/', views.Teste, name='teste')
 ]

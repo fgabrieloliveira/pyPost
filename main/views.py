@@ -36,3 +36,11 @@ def Article_datail(request, article_id):
 
     
     return render(request, 'main/detail.html', {'article_info':article_info, 'teste':teste})
+
+
+def Teste(request):
+    if request.method == 'POST':
+        search = request.POST.get('search', None)
+        
+        
+    return render(request, 'base.html')
