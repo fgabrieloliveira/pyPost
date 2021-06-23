@@ -1,3 +1,4 @@
+from django.db import reset_queries
 from django.shortcuts import render
 from main.models import Articles
 from django.conf import settings
@@ -31,7 +32,7 @@ def Article_datail(request, article_id):
     article_info['image'] = Articles.objects.get(id=article_id).image
     
 
-    teste = str("images/github.jpeg")
+    
     
 
     
@@ -40,7 +41,12 @@ def Article_datail(request, article_id):
 
 def Teste(request):
     if request.method == 'POST':
-        search = request.POST.get('search', None)
+        search = str(request.POST.get('search', None)).strip().lower()
+        results = list()
+
+        for article in Articles.objects.all():
+            if search in str(article.title).lower() or search in str(article.headline).lower():
+                results.append(article)
+    result_counter = len(results)
         
-        
-    return render(request, 'base.html')
+    return render(request, 'main/search.html', {'results':results, 'result_counter':result_counter})
