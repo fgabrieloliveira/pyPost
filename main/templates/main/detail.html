@@ -5,14 +5,14 @@
 <br>
 
 <div class="card offset-2" style="width: 860px;">
-    <img class="card-img-top" src="/{{MEDIA_URL}}{{article_info.image}}">
+    <img class="card-img-top" src="/{{MEDIA_URL}}{{article.image}}">
     <div class="card-body">
         <div class="card-text">
-        <p class="text-muted">{{ article_info.author }} in {{ article_info.pub_date }}</p>
-        <h2 class="text-center">{{ article_info.title }}</h2>
-        <h5 class="text-center">{{ article_info.headline }}</h5>
+        <p class="text-muted">{{ article.author }} in {{ article.pub_date }}</p>
+        <h2 class="text-center">{{ article.title }}</h2>
+        <h5 class="text-center">{{ article.headline }}</h5>
         <br>
-        <p class="text-justified">{{ article_info.text }}</p>
+        <p class="text-justified">{{ article.text }}</p>
         </div>
         </div>
     </div>
