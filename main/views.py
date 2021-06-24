@@ -17,11 +17,11 @@ def Index(request):
 
 def Article_datail(request, article_id):
     article = Articles.objects.get(id=article_id)
-    
+
     return render(request, 'main/detail.html', {'article':article})
 
 
-def Teste(request):
+def Search(request):
     if request.method == 'POST':
         search = str(request.POST.get('search', None)).strip().lower()
         results = list()
